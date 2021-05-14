@@ -63,7 +63,7 @@ if (z != 0) {
 }
 */
 
-//Tarea 5
+//Tarea 5 - Que sucede si el ususario ingresa una letra y la transformo a numero con parseInt
 /*
 function booleanos() {
   let tamañoArray = parseInt(prompt(`Cuantos elementos tendra su arreglo?`));
@@ -110,3 +110,88 @@ function areaMundial(nombre, sup) {
 }
 areaMundial(nombrePais, area);
 */
+
+//---------------------------------------------------------------------------------------
+
+//Escribe un programa que pida una frase y escriba las vocales que aparecen --- ¿Como seria con metodos avanzados?
+/*
+let frase = prompt(`Escriba una frase`);
+let fraseToArray = frase.split("");
+let arrayVocales = [];
+for (let i = 0; i < fraseToArray.length; i++) {
+  fraseToArray[i].toLowerCase;
+  console.log(fraseToArray[i]);
+  if (
+    fraseToArray[i] === "a" ||
+    fraseToArray[i] === "e" ||
+    fraseToArray[i] === "i" ||
+    fraseToArray[i] === "o" ||
+    fraseToArray[i] === "u"
+  ) {
+    arrayVocales.push(fraseToArray[i]);
+  }
+}
+console.log(arrayVocales);
+*/
+
+// Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de identidad). El algoritmo para calcular la letra del dni es el siguiente :
+//El número debe ser entre 0 y 99999999
+//Debemos calcular el resto de la división entera entre el número y el número 23.
+//Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes:  (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
+//Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
+/*
+let dni = parseInt(prompt(`ingrese su numero de documento sin puntos`));
+let letras = [
+  "T",
+  "R",
+  "W",
+  "A",
+  "G",
+  "M",
+  "Y",
+  "F",
+  "P",
+  "D",
+  "X",
+  "B",
+  "N",
+  "J",
+  "Z",
+  "S",
+  "Q",
+  "V",
+  "H",
+  "L",
+  "C",
+  "K",
+  "E",
+];
+while (isNaN(dni) && dni > 0 && dni < 99999999) {
+  alert(`Ingrso su DNI con numeros de putuacion o no ingreso numeros`);
+  dni = parseInt(prompt(`ingrese su numero de documento sin puntos`));
+}
+let posicionArray = parseInt(dni % 23);
+console.log(posicionArray);
+alert(`La letra de su dni es ${letras[posicionArray]}`);
+*/
+
+//Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”
+/*
+let string1 = prompt(`Ingrese una frase`);
+let string2 = string1.split("");
+let string3 = [];
+let = length = string2.length;
+for (let i = 0; i < length; i++) {
+  string3[i] = string2.pop();
+}
+console.log(string3);
+*/
+
+//Multiplicar los valores de un arreglo y almacenar los nuevos valores multiplicados en un nuevo array.
+/*
+let arrayNumbers = [1, 2, 3, 4, 5];
+let array2 = arrayNumbers.map((number) => number * 2);
+console.log(array2);
+*/
+
+//Crear una función que tome una matriz de nombres y devuelva una matriz en la que sólo la primera letra de cada nombre esté en mayúsculas.
