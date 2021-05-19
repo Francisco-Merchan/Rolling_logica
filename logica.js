@@ -63,7 +63,7 @@ if (z != 0) {
 }
 */
 
-//Tarea 5 - Que sucede si el ususario ingresa una letra y la transformo a numero con parseInt
+//Tarea 5 - DUDA ¿Que sucede si el ususario ingresa una letra y la transformo a numero con parseInt?
 /*
 function booleanos() {
   let tamañoArray = parseInt(prompt(`Cuantos elementos tendra su arreglo?`));
@@ -89,7 +89,7 @@ function booleanos() {
 booleanos();
 */
 
-//Tarea 6 - como transformo el area en un numero sin puntuacion en caso de que el usuario ingrese 17.098.242
+//Tarea 6 - DUDA ¿como transformo el numero infresado en un numero sin puntuacion en caso de que el usuario ingrese 17.098.242?
 /*
 let nombrePais = prompt(
   `De que pais quiere conocer su proporcion de area mundial?`
@@ -195,3 +195,119 @@ console.log(array2);
 */
 
 //Crear una función que tome una matriz de nombres y devuelva una matriz en la que sólo la primera letra de cada nombre esté en mayúsculas.
+/*
+let array1 = ["francisco", "daniel", "manuel", "jose", "mathias", "eSTeban"];
+function letraMayus(array) {
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i].toLowerCase();
+    let array2 = array[i].split("");
+    let mayus = array2[0].toUpperCase();
+    array2.splice(0, 1, mayus);
+    array2 = array2.join("");
+    console.log(array2);
+  }
+}
+letraMayus(array1);
+/*
+
+// Crear una función para mezclar los elementos de dos arrays. Intercalando los elementos de ambos arreglos de forma alternada.
+/*
+let array1 = ["1", "2", "3", "4", "5"];
+let array2 = ["A", "B", "C"];
+let array3 = [];
+let z = 0;
+for (let i = 0; i < array1.length; i++) {
+  array3.push(array1[i]);
+  if (z < array2.length) {
+    array3.push(array2[z]);
+    z++;
+  }
+}
+console.log(array3);
+*/
+
+// 6- Loves Me, Loves Me Not
+/*
+let petalos = parseInt(prompt(`Cuantos petalos tendra su flor?`));
+let array = [];
+for (let i = 0; i < petalos; i++) {
+  if (i === petalos - 1) {
+    if (i % 2 === 0) {
+      array.push("Love Me".toUpperCase());
+    } else {
+      array.push("Love Me Not".toUpperCase());
+    }
+  } else {
+    if (i % 2 === 0) {
+      array.push("Love Me");
+    } else {
+      array.push("Love Me Not");
+    }
+  }
+}
+console.log(array);
+*/
+
+// 7-Crear una función que tome una array de números y nos devuelva un texto que diga: El número más bajo es y el más alto es
+/*
+let array = ["3", "7", "1"];
+function number(array) {
+  array.sort((a, b) => a - b);
+  return console.log(
+    `El numero menor es ${array[0]} y el numero mayor es ${
+      array[array.length - 1]
+    }`
+  );
+}
+number(array);
+*/
+
+// 8 -Crear una función que tome una array de palabras y retorne la palabra más larga dentro de esa array:
+/*
+let array = ["Francisco", "Manuel", "Jose", "Mathias", "Ricardo"];
+function contarLetras(array) {
+  let tamaño = 0;
+  let z;
+  for (let i = 0; i < array.length; i++) {
+    array[i].split("");
+    if (tamaño < array[i].length) {
+      tamaño = array[i].length;
+      z = i;
+    }
+  }
+  return console.log(`La palabra mas larga es ${array[z]}`);
+}
+contarLetras(array);
+*/
+
+// 9-
+// Crear una funcion que tome una palabra y nos devuelva si una palabra es un palíndromo (una palabra que se lee tanto de izquierda a derecha, como de derecha a izquierda). El programa retornará true si es un palíndromo y false si no lo es.
+/*
+function palindromo(array) {
+  let array1 = array.split("");
+  let array2 = [];
+  for (let i = 0; i < array1.length; i++) {
+    array2.unshift(array1[i]);
+  }
+  array2 = array2.join("");
+  if (array === array2) {
+    console.log(`La palanra es un palindromo`);
+  } else {
+    console.log(`La palabra no es un palindromo`);
+  }
+}
+palindromo("ana");
+*/
+
+//12- Remover elementos duplicados de un array:
+/*
+let array1 = ["1", "2", "Jose", "auto", "7", "Jose"];
+for (let i = 0; i < array1.length; i++) {
+  for (let z = i + 1; z < array1.length; z++) {
+    if (array1[i] === array1[z]) {
+      array1.splice(z, 1);
+    }
+  }
+}
+console.log(array1);
+*/
