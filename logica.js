@@ -208,19 +208,19 @@ function letraMayus(array) {
   }
 }
 letraMayus(array1);
-/*
+*/
 
 // Crear una función para mezclar los elementos de dos arrays. Intercalando los elementos de ambos arreglos de forma alternada.
 /*
-let array1 = ["1", "2", "3", "4", "5"];
+let array1 = ["1", "2"];
 let array2 = ["A", "B", "C"];
 let array3 = [];
-let z = 0;
-for (let i = 0; i < array1.length; i++) {
-  array3.push(array1[i]);
-  if (z < array2.length) {
-    array3.push(array2[z]);
-    z++;
+for (let i = 0; i < array1.length + array2.length; i++) {
+  if (i < array1.length) {
+    array3.push(array1[i]);
+  }
+  if (i < array2.length) {
+    array3.push(array2[i]);
   }
 }
 console.log(array3);
@@ -264,18 +264,21 @@ number(array);
 
 // 8 -Crear una función que tome una array de palabras y retorne la palabra más larga dentro de esa array:
 /*
-let array = ["Francisco", "Manuel", "Jose", "Mathias", "Ricardo"];
+let array = ["Francisco", "Manuel", "Jose", "Mathias", "Ricardo", "Argentina"];
 function contarLetras(array) {
-  let tamaño = 0;
-  let z;
+  let palabrasLargas = [];
+  let tamaño = array[0].length;
   for (let i = 0; i < array.length; i++) {
-    array[i].split("");
-    if (tamaño < array[i].length) {
+    if (array[i].length > tamaño) {
       tamaño = array[i].length;
-      z = i;
     }
   }
-  return console.log(`La palabra mas larga es ${array[z]}`);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length === tamaño) {
+      palabrasLargas.push(array[i]);
+    }
+  }
+  return console.log(`La palabra mas larga es ${palabrasLargas}`);
 }
 contarLetras(array);
 */
